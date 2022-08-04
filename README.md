@@ -20,7 +20,7 @@ User can navigate through the bot via buttons, or using text messages.
 
 # API
 
-You can send commands to this bot using http request after running bread_cat_api.py script.
+You can send commands to this bot using HTTP requests after running bread_cat_api.py script.
 API doesn't use methods or decorators and runs console text interface instead.
 
 Authentication is not released yet so you have to manually send to the bot an ID of the chat with the bot. 
@@ -34,4 +34,18 @@ When called from Telegram, the bot stores the following information using SQLite
 - user's message
 - time of the message
 
-The database is stored locally in the folder of the script, and saves only the message with /start command. The name of database: 'messages'.
+The database is stored locally in the folder of the script, and saves only the message with /start command. The name of the database: 'messages'.
+
+# Functions
+
+**insert_data**(username, chatid, message, time) - creates a table in the folder of the script if not already exist, and writes info passed from bot_start().
+
+**bot_start**(message) - asynchronous function initialized by '/start' command, sends welcome message and launches insert_data().
+
+**first_state**(message, state) - asynchronous function that handles the first reply after the /start command, changes state of DetectObject class if a user choosed 'yes', sends message and returns nothing if choosed 'no'.
+
+**second_state**(message, state) - asynchronous function that handles the second reply after the /start command, resets state of DetectObject class if a user choosed 'yes', sends message and returns nothing if choosed 'no'.
+
+**register_handlers_state**(dp) - registers bot_start(), first_state(), and second_state() functions.
+
+**main**() - runs the script
