@@ -1,0 +1,8 @@
+aiogram
+asyncio
+pytest
+telethon
+pytest-asyncio
+python-telegram-bot
+cryptg
+pillow
