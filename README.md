@@ -2,7 +2,7 @@
 
 This script runs @bread_cat_bot
 
-# How to launch
+# How to set up
 With a single command using Docker: https://hub.docker.com/r/urusaitech/breadcat
 
 Or manually: 
