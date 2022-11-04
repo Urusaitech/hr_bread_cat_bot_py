@@ -19,7 +19,7 @@ Or manually:
 User can navigate through the bot via buttons, or using text messages. 
 
 # API
-
+In development.
 You can send commands to this bot using HTTP requests after running bread_cat_api.py script.
 API doesn't use methods or decorators and runs console text interface instead.
 
