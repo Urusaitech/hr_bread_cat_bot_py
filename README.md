@@ -46,3 +46,7 @@ The database is stored locally in the folder of the script, and saves only the m
 **register_handlers_state**(dp) - registers bot_start(), first_state(), and second_state() functions.
 
 **main**() - runs the script
+
+# Loggin
+
+The bot has ability to log it's state, can be turned on by uncommenting main() function 
