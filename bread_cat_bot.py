@@ -7,10 +7,12 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import State, StatesGroup
 
+# detected bot commands 
 replies_yes = ('конечно', 'ага', 'пожалуй', 'да')
 replies_no = ('нет, конечно', 'ноуп', 'найн', 'нет')
 
 
+# this class sets up bot's state after the command is detected
 class DetectObject(StatesGroup):
     waiting_for_answer1 = State()
     waiting_for_answer2 = State()
@@ -51,12 +53,13 @@ async def second_state(message: types.Message, state: FSMContext):
     await state.finish()
 
 
+# this func launches bot's functionality in telegram
 def register_handlers_state(dp: Dispatcher):
     dp.register_message_handler(bot_start, commands='start', state='*')
     dp.register_message_handler(first_state, state=DetectObject.waiting_for_answer1)
     dp.register_message_handler(second_state, state=DetectObject.waiting_for_answer2)
 
-
+# logger, TODO: wrap in func 
 logger = logging.getLogger(__name__)
 
 
