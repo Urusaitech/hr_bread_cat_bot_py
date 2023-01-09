@@ -1,4 +1,5 @@
 # bread_cat_eora
+It's an example project for HRs that won't be finished soon. 
 
 This script runs @bread_cat_bot
 
@@ -20,11 +21,7 @@ User can navigate through the bot via buttons, or using text messages.
 
 # API
 In development.
-You can send commands to this bot using HTTP requests after running bread_cat_api.py script.
-API doesn't use methods or decorators and runs console text interface instead.
-
-Authentication is not released yet so you have to manually send to the bot an ID of the chat with the bot. 
-Afterwards the bot will send answer both to your STDOUT and Telegram chat. 
+There would be an end-point with a single POST method. 
 
 # DataBase
 
