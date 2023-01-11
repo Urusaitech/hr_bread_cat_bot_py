@@ -47,6 +47,6 @@ The database is stored locally in the folder of the script, and saves only the m
 
 **main**() - runs the script
 
-# Loggin
+# Logging
 
 The bot has ability to log it's state, can be turned on by uncommenting main() function 
