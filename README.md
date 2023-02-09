@@ -49,4 +49,4 @@ The database is stored locally in the folder of the script, and saves only the m
 
 # Logging
 
-The bot has ability to log it's state, can be turned on by uncommenting main() function 
+The bot has ability to log it's state, can be turned on by uncomment ING part of the main() function 
