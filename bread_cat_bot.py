@@ -16,8 +16,8 @@ replies_no = ('нет, конечно', 'ноуп', 'найн', 'нет')
 class DetectObject(StatesGroup):
     waiting_for_answer1 = State()
     waiting_for_answer2 = State()
-
-
+   
+# TODO: comments
 async def bot_start(message: types.Message):
     print(message)
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -26,7 +26,7 @@ async def bot_start(message: types.Message):
                          reply_markup=keyboard)
     await DetectObject.waiting_for_answer1.set()
 
-
+# TODO: comments
 async def first_state(message: types.Message, state: FSMContext):
     if message.text.lower() not in replies_yes + replies_no:
         await message.answer(f'Я распознаю только {replies_yes + replies_no}')
@@ -40,7 +40,7 @@ async def first_state(message: types.Message, state: FSMContext):
     await DetectObject.next()
     await message.answer('У него есть уши?', reply_markup=keyboard)
 
-
+# TODO: comments
 async def second_state(message: types.Message, state: FSMContext):
     if message.text.lower() not in replies_yes + replies_no:
         await message.answer(f'Я распознаю только {replies_yes + replies_no}')
@@ -62,7 +62,7 @@ def register_handlers_state(dp: Dispatcher):
 # logger, TODO: wrap in func 
 logger = logging.getLogger(__name__)
 
-
+# TODO: comments
 async def main():
     # remove '#' for logs in stdout
     # logging.basicConfig(
