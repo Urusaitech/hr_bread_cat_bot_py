@@ -6,3 +6,4 @@ pytest-asyncio
 python-telegram-bot
 cryptg
 pillow
+# TODO: add versions
